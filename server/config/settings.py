@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'blog',
 ]
 
 MIDDLEWARE = [
@@ -75,18 +77,10 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'djongo',
-        'NAME': 'your_mongodb_database_name',
-        'ENFORCE_SCHEMA': False,
-        'CLIENT': {
-            'host': 'your_mongodb_host',  # مثال: 'localhost:27017'
-            'username': 'your_mongodb_username',
-            'password': 'your_mongodb_password',
-            'authSource': 'your_mongodb_auth_database',  # مثال: 'admin'
-        }
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
 
 
 # Password validation
