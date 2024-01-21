@@ -11,3 +11,6 @@ class PostListView(APIView):
         post = Post.objects.all()
         serilizer = PostSerilazer(post,many=True)
         return Response(serilizer.data)
+    
+    def post(self, request):
+        return Response(request.data)
