@@ -73,21 +73,13 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+
 DATABASES = {
     'default': {
-        'ENGINE': 'djongo',
-        'NAME': 'your_mongodb_database_name',
-        'ENFORCE_SCHEMA': False,
-        'CLIENT': {
-            'host': 'your_mongodb_host',  # مثال: 'localhost:27017'
-            'username': 'your_mongodb_username',
-            'password': 'your_mongodb_password',
-            'authSource': 'your_mongodb_auth_database',  # مثال: 'admin'
-        }
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
