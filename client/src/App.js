@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-
+import axios from "axios";
 const App = () => {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    fetch("http://127.0.0.1:4040/").then((event) => {
-      console.log(event);
+    axios.get("http://localhost:4040/test/").then((response) => {
+      console.log(response);
     });
   }, []);
 
