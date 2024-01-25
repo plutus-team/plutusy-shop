@@ -4,6 +4,6 @@ from . import views
 
 
 urlpatterns = [
-    path('test/', views.PostListView.as_view(), name="Api-postlist")
+    path('test/', views.ok, name="Api-postlist")
 
 ]
