@@ -4,7 +4,7 @@ const App = () => {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    axios.get("http://localhost:4040/test/").then((response) => {
+    axios.get("http://localhost:8000/test/").then((response) => {
       console.log(response);
     });
   }, []);
